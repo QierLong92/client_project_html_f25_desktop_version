@@ -121,7 +121,10 @@ footer {
 .section3,
 .section4,
 .section5,
-.section6 {
+.section6,
+.section7,
+.section8,
+.section9 {
     grid-column: 1/-1;
     padding: 20px 16px;
     font-family: Helvetica;
@@ -156,10 +159,6 @@ footer {
     padding: 16px;
     box-shadow: 0 0 4px #d2d2d2;
     list-style-type: none;
-}
-
-#Alumni ul li{
-    grid-column: 1/span 1;
 }
 
 #Start a,
@@ -213,9 +212,19 @@ main img {
     border-radius: 0.5rem;
 }
 
+.FAQ1:hover .item1 {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
 
 
-@media screen and (min-width: 900px) {
+.item1 a:hover {
+    background: #f3f4f6;
+}
+
+
+@media screen and (min-width: 400px) {
 
     /* Navigation */
     nav {
@@ -254,7 +263,7 @@ main img {
     .section2 .international,
     .section3 .resume_resource,
     .section3 .Start,
-    .section3 .Popular,
+    .section3 .Start .Popular,
     .section3 .interview,
     .Resource,
     .section1 .roadmap {
@@ -265,7 +274,7 @@ main img {
 
     /*section 2 li*/
     .section2 .Resource ul,
-    .section3 .Popular,
+    .section3 .Popular ul,
     .section1 .alumni ul {
         display: contents;
         padding: 0;
@@ -286,7 +295,6 @@ main img {
     /*H2 span both columns */
     .section1 h2,
     .section1 h3,
-    .Popular h3,
     .section3 .Start h2,
     .section3 .Start h3,
     .resume_resource h2,
@@ -300,7 +308,7 @@ main img {
 
 
     /* #Start */
-    #Start_image,
+    #Start img,
     #Roadmap img,
     #International p,
     #ResumeResource ul,
@@ -323,7 +331,7 @@ main img {
     }
 
     /*divide career_exploration page section 1 into two comlumn equally*/
-    #Success ul,
+    .section1 ul,
     .phd_resource {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -331,13 +339,4 @@ main img {
         align-items: start;
     }
 
-    .phd_resource iframe {
-        grid-column: 1/2;
-    }
-
-    .phd_resource ul {
-        grid-column: 2/3;
-        margin-top: 0;
-        align-items: start;
-    }
 }
